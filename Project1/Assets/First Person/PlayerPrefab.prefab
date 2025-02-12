@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a7b2ba3e1459af4f8b172d739fecfcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 5
   mouseSensitivity: 100
   Cam: {fileID: 1027985454758151799}
   BulletSpawner: {fileID: 1347700016623256765}

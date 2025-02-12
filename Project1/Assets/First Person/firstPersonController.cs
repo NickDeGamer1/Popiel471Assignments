@@ -9,9 +9,9 @@ public class firstPersonController : MonoBehaviour
     float CamUpRotation = 0;
     CharacterController controller;
     [SerializeField]
-    float speed = 10.0f;
+    float speed = 30.0f;
     [SerializeField]
-    float mouseSensitivity = 100.0f;
+    float mouseSensitivity = 75.0f;
     [SerializeField]
     GameObject Cam;
     [SerializeField]
