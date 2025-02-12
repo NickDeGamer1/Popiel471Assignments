@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.GraphicsBuffer;
 
 public class firstPersonController : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class firstPersonController : MonoBehaviour
     float CamUpRotation = 0;
     CharacterController controller;
     [SerializeField]
-    float speed = 2.0f;
+    float speed = 10.0f;
     [SerializeField]
     float mouseSensitivity = 100.0f;
     [SerializeField]
@@ -18,10 +19,15 @@ public class firstPersonController : MonoBehaviour
     [SerializeField]
     GameObject Bullet;
 
+    bool LockedOn = false;
+    public GameObject ObjectToLockOn = null;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -44,7 +50,22 @@ public class firstPersonController : MonoBehaviour
         //Vector3 ActualMovement = new Vector3(moveX, 0, moveZ);
         Vector3 ActualMovement = transform.forward * moveZ + transform.right * moveX;
         controller.Move(ActualMovement * Time.deltaTime * speed);
+
+
+
+        if (Input.GetMouseButton(1))
+        {
+            LockedOn = true;
+            if (ObjectToLockOn != null)
+            {
+                Cam.transform.LookAt(ObjectToLockOn.transform);
+            }
+        }
+        else
+            LockedOn = false;
     }
+
+    
 
     void OnMove(InputValue moveVal)
     {
@@ -53,11 +74,22 @@ public class firstPersonController : MonoBehaviour
 
     void OnLook(InputValue lookVal)
     {
-        mouseMovement = lookVal.Get<Vector2>();
+        if (!LockedOn)
+            mouseMovement = lookVal.Get<Vector2>();
+        else
+            mouseMovement = new Vector2(0, 0);
     }
 
     void OnAttack(InputValue attackVal)
     {
         Instantiate(Bullet, BulletSpawner.transform.position, BulletSpawner.transform.rotation);
     }
+
+    //public void OnLockOn(InputAction.CallbackContext context)
+    //{
+    //    if (context.performed) // Button pressed
+    //        LockedOn = true;
+    //    else if (context.canceled) // Button released
+    //        LockedOn = false;
+    //}
 }

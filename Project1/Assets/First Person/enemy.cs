@@ -20,6 +20,9 @@ public class enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Health -= 1;
+        if (other.tag == "Bullet")
+        {
+            Health -= 1;
+        }
     }
 }
