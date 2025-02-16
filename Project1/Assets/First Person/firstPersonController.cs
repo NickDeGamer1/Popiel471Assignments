@@ -18,6 +18,8 @@ public class firstPersonController : MonoBehaviour
     GameObject BulletSpawner;
     [SerializeField]
     GameObject Bullet;
+    [SerializeField]
+    GameObject UI;
 
     bool LockedOn = false;
     public GameObject ObjectToLockOn = null;
@@ -28,6 +30,8 @@ public class firstPersonController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        //UI.SetActive(true);
     }
 
     // Update is called once per frame

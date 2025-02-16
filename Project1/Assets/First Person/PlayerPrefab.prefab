@@ -332,6 +332,7 @@ MonoBehaviour:
   Cam: {fileID: 1027985454758151799}
   BulletSpawner: {fileID: 1347700016623256765}
   Bullet: {fileID: 545174456255852563, guid: 63b7183a3817ea6429782df8a19d42b6, type: 3}
+  UI: {fileID: 4068604834599287340}
   ObjectToLockOn: {fileID: 0}
 --- !u!1 &2443317150775081706
 GameObject:
@@ -487,7 +488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2881448708131157063
 RectTransform:
   m_ObjectHideFlags: 0
@@ -519,14 +520,14 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_Camera: {fileID: 3985520744154202592}
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -707,7 +708,7 @@ GameObject:
   - component: {fileID: 4282837160056628470}
   m_Layer: 0
   m_Name: PlayerPrefab
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
