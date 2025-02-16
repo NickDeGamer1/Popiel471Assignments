@@ -22,7 +22,7 @@ public class firstPersonController : MonoBehaviour
     GameObject UI;
 
     bool LockedOn = false;
-    public GameObject ObjectToLockOn = null;
+    GameObject LockOnto = null;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -60,13 +60,21 @@ public class firstPersonController : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
             LockedOn = true;
-            if (ObjectToLockOn != null)
+            if (LockOnto == null)
             {
-                Cam.transform.LookAt(ObjectToLockOn.transform);
+                LockOnto = Cam.GetComponent<ShapeCastCam>().ShapeCast();
+            }
+            else
+            {
+                transform.LookAt(LockOnto.transform);
+                Cam.transform.LookAt(LockOnto.transform);
             }
         }
         else
+        {
             LockedOn = false;
+            LockOnto = null;
+        }
     }
 
     

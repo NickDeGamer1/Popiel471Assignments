@@ -25,6 +25,7 @@ public class enemy : MonoBehaviour
         if (other.tag == "Bullet")
         {
             Health -= 1;
+            Debug.Log("hit");
         }
     }
 }

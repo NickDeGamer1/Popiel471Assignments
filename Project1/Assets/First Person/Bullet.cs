@@ -16,11 +16,16 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(transform.forward * 150);
+        rb.AddForce(transform.forward * 20000 * Time.deltaTime);
         TTD -= Time.deltaTime;
         if (TTD < 0)
         {
             Destroy(gameObject);
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        //if (other.gameObject.tag != "Player")
+        //    Destroy(gameObject);
     }
 }

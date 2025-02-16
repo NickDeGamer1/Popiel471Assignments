@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-
     private enum State
     {
         Pace,
