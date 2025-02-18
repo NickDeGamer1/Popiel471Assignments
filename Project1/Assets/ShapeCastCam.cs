@@ -32,4 +32,22 @@ public class ShapeCastCam : MonoBehaviour
         return null;
     }
 
+    public GameObject RayCast()
+    {
+        RaycastHit hit;
+        Vector3 p1 = transform.position;
+        int layerMask = ~LayerMask.GetMask("Bullets");
+        if (Physics.Raycast(transform.position, transform.forward.normalized, out hit, 30, layerMask))
+        {
+            if (hit.rigidbody != null)
+            {
+                GameObject h = hit.rigidbody.gameObject;
+                if (h.CompareTag("Enemy"))
+                {
+                    return h;
+                }
+            }
+        }
+        return null;
+    }
 }

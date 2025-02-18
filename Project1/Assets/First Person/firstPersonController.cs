@@ -68,6 +68,7 @@ public class firstPersonController : MonoBehaviour
             {
                 transform.LookAt(LockOnto.transform);
                 Cam.transform.LookAt(LockOnto.transform);
+                LockOnto = Cam.GetComponent<ShapeCastCam>().RayCast();
             }
         }
         else
