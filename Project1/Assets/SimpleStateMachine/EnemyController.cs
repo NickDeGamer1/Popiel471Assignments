@@ -135,11 +135,18 @@ public class EnemyController : MonoBehaviour
         if ((Physics.Raycast(transform.position, transform.forward, out hit, 10, layerMask)))
         {
             firstPersonController FPC = hit.transform.gameObject.GetComponent<firstPersonController>();
+            PlayerStateManager AC = hit.transform.gameObject.GetComponent<PlayerStateManager>();
 
             if (FPC != null)
             {
-                print(hit.transform.gameObject.name);
                 return hit.transform.gameObject;
+            }
+            if (AC != null)
+            { 
+                if (!AC.currentState.Equals(AC.sneakState))
+                {
+                    return hit.transform.gameObject;
+                }
             }
         }
         return null;
