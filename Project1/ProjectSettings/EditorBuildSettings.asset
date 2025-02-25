@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/AdvancedStateMachine/AdvancedStateMachine.unity
+    guid: 1f182fd30555a184da47502f9a917d6f
+  - enabled: 0
     path: Assets/SimpleStateMachine/StateMachine.unity
     guid: b60bed58b67430648b951d3153a83c98
   - enabled: 0

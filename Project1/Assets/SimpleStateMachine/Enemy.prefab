@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e673ab590dfe0448bae715be30c1336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentState: 0
   route: []
 --- !u!114 &1938130560990710536
 MonoBehaviour:
@@ -140,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 5
+  EC: {fileID: 0}
 --- !u!54 &6619680807037262747
 Rigidbody:
   m_ObjectHideFlags: 0

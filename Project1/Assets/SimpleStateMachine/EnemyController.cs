@@ -151,4 +151,12 @@ public class EnemyController : MonoBehaviour
         }
         return null;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.GetComponent<PlayerStateManager>().ResetPosition();
+        }
+    }
 }

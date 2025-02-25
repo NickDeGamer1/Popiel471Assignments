@@ -4,14 +4,14 @@ public class PlayerSneakState : AbstractClass
 {
     public override void EnterState(PlayerStateManager PSM)
     {
-        Debug.Log("I'm Sneaking");
+        PSM.SetSneak();
+        //Debug.Log("I'm Sneaking");
     }
 
     public override void UpdateState(PlayerStateManager PSM)
     {
-        PSM.MovePlayer(PSM.defaultSpeed/4);
         //What are we doing during this state?
-        PSM.MovePlayer(20f);
+        PSM.MovePlayer(PSM.defaultSpeed * 0.5f);
         //On what conditions do we leave this state?
         if (PSM.movement.magnitude < 0.1)
         {

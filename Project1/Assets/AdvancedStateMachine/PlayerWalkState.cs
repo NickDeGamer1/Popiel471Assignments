@@ -4,14 +4,13 @@ public class PlayerWalkState : AbstractClass
 {
     public override void EnterState(PlayerStateManager PSM)
     {
-        Debug.Log("I'm Walking");
+        PSM.SetWalk();
     }
 
     public override void UpdateState(PlayerStateManager PSM)
     {
-        PSM.MovePlayer(PSM.defaultSpeed);
         //What are we doing during this state?
-        PSM.MovePlayer(20f);
+        PSM.MovePlayer(PSM.defaultSpeed);
         //On what conditions do we leave this state?
         if (PSM.movement.magnitude < 0.1)
         {

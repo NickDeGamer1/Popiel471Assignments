@@ -4,7 +4,7 @@ public class IdolState : AbstractClass
 {
     public override void EnterState(PlayerStateManager PSM)
     {
-        Debug.Log("I'm Idoling");
+        //Debug.Log("I'm Idoling");
     }
 
     public override void UpdateState(PlayerStateManager PSM)
