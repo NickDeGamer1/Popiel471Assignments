@@ -16,6 +16,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     GameObject[] route;
     GameObject target;
+    Animator Am;
     int index = 0;
     float speed = 5f;
     float SpinTime = 4f;
@@ -24,7 +25,8 @@ public class EnemyController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Am = GetComponent<Animator>();
+        Am.SetBool("Fallowing", false);
     }
 
     // Update is called once per frame
@@ -60,6 +62,8 @@ public class EnemyController : MonoBehaviour
         //Debug.Log("Im pacing");
         target = route[index];
 
+        Am.SetBool("Fallowing", false);
+
         if (Vector3.Distance(transform.position, target.transform.position) < 0.1)
         {
             index += 1;
@@ -76,6 +80,7 @@ public class EnemyController : MonoBehaviour
         //Fallow
         MoveTo(target);
 
+        Am.SetBool("Fallowing", true);
 
         GameObject obs = CheckForward();
         if (obs == null)
