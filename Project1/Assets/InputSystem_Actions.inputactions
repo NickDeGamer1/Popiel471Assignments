@@ -54,7 +54,7 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "2a85c88d-0cc5-4fa6-a5cf-9b3f3f043dda",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -90,6 +90,24 @@
                     "name": "LockOn",
                     "type": "Button",
                     "id": "6fae17bd-56a9-4576-8a75-98904fbd394a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Start",
+                    "type": "Button",
+                    "id": "017837f7-7765-4fdd-962a-802fb30cfac2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Exit",
+                    "type": "Button",
+                    "id": "36436838-4759-4f3a-9156-401debe2b00b",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -364,7 +382,7 @@
                 {
                     "name": "",
                     "id": "3e447517-2637-45b0-9b5f-ccfc1baa3bb0",
-                    "path": "<Gamepad>/leftStickPress",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -490,6 +508,28 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "LockOn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eeb3aa01-06ca-484f-bb09-25fd5af09b63",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "14fd45f9-83eb-4565-9d55-1cead7a177a0",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Exit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -4,6 +4,7 @@ public class PlayerWalkState : AbstractClass
 {
     public override void EnterState(PlayerStateManager PSM)
     {
+        PSM.animator2.SetInteger("State", 1);
         PSM.SetWalk();
     }
 

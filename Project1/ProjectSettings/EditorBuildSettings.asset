@@ -6,26 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Polish/BlenderScene.unity
-    guid: 9f6a8db5519246b4b9646ae8be55c6a3
-  - enabled: 0
+    path: Assets/AdvancedStateMachine/StartingScene.unity
+    guid: 3fa0b17d3cb250a42bea2df6b4e7674b
+  - enabled: 1
     path: Assets/AdvancedStateMachine/AdvancedStateMachine.unity
     guid: 1f182fd30555a184da47502f9a917d6f
-  - enabled: 0
-    path: Assets/SimpleStateMachine/StateMachine.unity
-    guid: b60bed58b67430648b951d3153a83c98
-  - enabled: 0
-    path: Assets/First Person/FPS.unity
-    guid: f4c09482f69aa1246bb14fe691be7142
-  - enabled: 0
-    path: Assets/RollABall/RollABall.unity
-    guid: 873c36d40de3e3c4686a49e13701437b
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Polish/WinGame.unity
-    guid: 21e0de773421ffe41b3500af039a705a
+    path: Assets/AdvancedStateMachine/EndingScene.unity
+    guid: 4e0dddc9686ef1649bc9ac035541c7ff
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

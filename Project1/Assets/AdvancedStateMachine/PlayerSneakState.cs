@@ -4,6 +4,7 @@ public class PlayerSneakState : AbstractClass
 {
     public override void EnterState(PlayerStateManager PSM)
     {
+        PSM.animator2.SetInteger("State", 2);
         PSM.SetSneak();
         //Debug.Log("I'm Sneaking");
     }

@@ -16,7 +16,6 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     GameObject[] route;
     GameObject target;
-    Animator Am;
     int index = 0;
     float speed = 5f;
     float SpinTime = 4f;
@@ -25,8 +24,7 @@ public class EnemyController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Am = GetComponent<Animator>();
-        Am.SetBool("Fallowing", false);
+
     }
 
     // Update is called once per frame
@@ -62,8 +60,6 @@ public class EnemyController : MonoBehaviour
         //Debug.Log("Im pacing");
         target = route[index];
 
-        Am.SetBool("Fallowing", false);
-
         if (Vector3.Distance(transform.position, target.transform.position) < 0.1)
         {
             index += 1;
@@ -79,8 +75,6 @@ public class EnemyController : MonoBehaviour
     {
         //Fallow
         MoveTo(target);
-
-        Am.SetBool("Fallowing", true);
 
         GameObject obs = CheckForward();
         if (obs == null)
@@ -137,7 +131,7 @@ public class EnemyController : MonoBehaviour
         RaycastHit hit;
         Debug.DrawRay(transform.position, transform.forward * 10, Color.green);
 
-        if ((Physics.Raycast(transform.position, transform.forward, out hit, 10, layerMask)))
+        if ((Physics.Raycast(transform.position - new Vector3(-.25f, 0, 0), transform.forward, out hit, 12, layerMask)))
         {
             firstPersonController FPC = hit.transform.gameObject.GetComponent<firstPersonController>();
             PlayerStateManager AC = hit.transform.gameObject.GetComponent<PlayerStateManager>();

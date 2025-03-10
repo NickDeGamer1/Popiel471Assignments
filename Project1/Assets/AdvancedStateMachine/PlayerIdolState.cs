@@ -4,6 +4,7 @@ public class IdolState : AbstractClass
 {
     public override void EnterState(PlayerStateManager PSM)
     {
+        PSM.animator2.SetInteger("State", 0);
         //Debug.Log("I'm Idoling");
     }
 
